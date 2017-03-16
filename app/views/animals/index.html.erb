@@ -2,7 +2,7 @@
 
 <h1>Animals</h1>
 
-<table>
+<table id="animal_list">
   <thead>
     <tr>
       <th>Common name</th>
@@ -28,4 +28,25 @@
 
 <br>
 
-<%= link_to 'Sightings', sightings_path %> | <%= link_to 'New Animal', new_animal_path %>
+<%= link_to 'Animal Sightings', sightings_path %> | <%= link_to 'Create New Animal', new_animal_path %>
+
+<hr>
+
+<h3>Add an Animal with AJAX</h3>
+<p>
+  <!-- Input area for new animal -->
+  <div class="field">
+    <label for="common_name">Common Name</label>
+    <input type="text" name="animal[common_name]" id="common_name" />
+  </div>
+  <div class="field">
+    <label for="latin_name">Latin Name</label>
+    <input type="text" name="animal[latin_name]" id="latin_name" />
+  </div>
+  <div class="field">
+    <label for="kingdom">Kingdom</label>
+    <input type="text" name="animal[kingdom]" id="kingdom" />
+  </div>
+
+  <button id="add_new_animal_button">Create New Animal</button>
+</p>
