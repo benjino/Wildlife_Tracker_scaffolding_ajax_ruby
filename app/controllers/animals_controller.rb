@@ -17,6 +17,9 @@ class AnimalsController < ApplicationController
     @animal = Animal.new
   end
 
+  def calendar
+  end
+
   # GET /animals/1/edit
   def edit
   end
